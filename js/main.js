@@ -312,6 +312,25 @@ function init3DStats() {
     });
 }
 
+// Mobile Navigation Toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navToggle.innerHTML = navMenu.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+});
+
 // Initialize all functions
 document.addEventListener('DOMContentLoaded', () => {
     initScheduleTabs();

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate - Hack to Crack 2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-removebg-preview.png" alt="H2C Logo">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#prizes" class="nav-link">Prizes</a>
+                <a href="index.html#sponsors" class="nav-link">Sponsors</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Certificate Verification Section -->
+    <section class="verify-certificate">
+        <div class="container">
+            <h2 class="section-title">Verify Your Certificate</h2>
+            <div class="verify-content">
+                <div class="verify-form">
+                    <input type="text" id="certificateNo" placeholder="Enter Certificate Number" required>
+                    <button id="verifyBtn" class="cta-button">Verify Certificate</button>
+                </div>
+                <div id="resultBox" class="result-box" style="display: none;">
+                    <div class="result-content">
+                        <h3>Certificate Details</h3>
+                        <div id="certificateDetails">
+                            <p><strong>Name:</strong> <span id="holderName">-</span></p>
+                            <p><strong>Certificate No:</strong> <span id="certNo">-</span></p>
+                            <div class="certificate-actions">
+                                <a href="#" id="downloadLink" class="cta-button" target="_blank">Download Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="errorBox" class="error-box" style="display: none;">
+                    <p>Invalid certificate number. Please check and try again.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Hack to Crack 2.0</h3>
+                    <p>Innovate. Code. Transform.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hack to Crack 2.0. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/certificate.js"></script>
+</body>
+</html>
