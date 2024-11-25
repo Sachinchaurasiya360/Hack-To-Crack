@@ -1,12 +1,12 @@
 // Sample certificate data (in production, this would come from a server)
 const certificateData = {
     "H2C2024001": {
-        name: "John Doe",
+        name: "Sachin Chaurasiya",
         certificateNo: "H2C2024001",
         downloadUrl: "certificates/H2C2024001.pdf"
     },
     "H2C2024002": {
-        name: "Jane Smith",
+        name: "Arbaaz Khan",
         certificateNo: "H2C2024002",
         downloadUrl: "certificates/H2C2024002.pdf"
     },
