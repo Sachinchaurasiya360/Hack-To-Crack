@@ -170,3 +170,222 @@
 .float {
     animation: float 3s ease-in-out infinite;
 }
+
+/* Particle Animation */
+.particle-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0) scale(1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-100px) translateX(100px) rotate(180deg) scale(1.5);
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-200px) translateX(200px) rotate(360deg) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Scroll Animations */
+.animate-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Entry Animations */
+.track-card.animate-in,
+.prize-card.animate-in {
+    animation: cardEntry 0.6s ease-out forwards;
+}
+
+.timeline-item.animate-in {
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+.stat-item.animate-in {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+.faq-item.animate-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes cardEntry {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero Section Animations */
+.hero h1 {
+    animation: gradientText 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mobile Menu Animation */
+.nav-links li {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.nav-links.active li {
+    animation: menuItemFade 0.5s ease forwards;
+}
+
+@keyframes menuItemFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Animation */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: translateX(-100%);
+}
+
+.cta-button:hover::after {
+    animation: buttonGlow 0.8s ease-in-out;
+}
+
+@keyframes buttonGlow {
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+/* Timeline Animation */
+.timeline::before {
+    animation: timelinePulse 2s ease-in-out infinite;
+}
+
+@keyframes timelinePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+    }
+}
+
+/* Card Hover Effects */
+.track-card,
+.prize-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.track-card:hover,
+.prize-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(33, 150, 243, 0.2);
+}
+
+/* FAQ Hover Animation */
+.faq-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.1);
+}

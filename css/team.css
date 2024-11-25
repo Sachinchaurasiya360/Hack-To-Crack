@@ -1,0 +1,261 @@
+/* Team Page Styles */
+
+/* Hero Section */
+.team-hero {
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(10, 10, 31, 0.9) 0%, rgba(33, 150, 243, 0.1) 100%);
+}
+
+/* Core Team Section */
+.core-team,
+.department-heads,
+.volunteers {
+    padding: 5rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.team-card.lead {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.member-image {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.team-card.lead .member-image {
+    padding-top: 60%;
+}
+
+.member-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.social-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .social-links {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-links a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.team-card.lead .member-info {
+    padding: 2rem;
+}
+
+.member-info h3 {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.position {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--dark-bg);
+    margin-bottom: 1rem;
+}
+
+.member-info p {
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+/* Volunteers Section */
+.volunteer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.join-team {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.join-team h3 {
+    font-size: 1.8rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.join-team p {
+    color: var(--gray-text);
+    margin-bottom: 2rem;
+}
+
+/* Back to Home Button */
+.back-home {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 100;
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    color: var(--light-text);
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: var(--secondary-color);
+    color: var(--dark-bg);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .team-card.lead {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card.lead .member-image {
+        padding-top: 100%;
+    }
+
+    .member-info {
+        padding: 1.2rem;
+    }
+
+    .team-card.lead .member-info {
+        padding: 1.5rem;
+    }
+
+    .join-team {
+        padding: 2rem 1rem;
+    }
+
+    .back-home {
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
+
+/* Animation for team cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.team-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.team-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Hover effects for social links */
+.social-links a {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover::after {
+    transform: translateX(0);
+}

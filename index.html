@@ -10,32 +10,10 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">H2C 2.0</a>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#tracks">Tracks</a></li>
-                <li><a href="#prizes">Prizes</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#committee">Committee</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#register" class="register-btn">Register</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="particle-container"></div>
         <div class="hero-content">
             <h1 class="glitch" data-text="Hack to Crack 2.0">Hack to Crack 2.0</h1>
             <p class="tagline">Innovate. Code. Transform.</p>
@@ -62,99 +40,150 @@
         
     </section>
 
+
+    
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About The Event</h2>
+        <div class="about-content">
+            <div class="about-text-content">
+                <h3>Welcome to Hack to Crack 2.0</h3>
+                <p>Join us for the second edition of Hack to Crack, where innovation meets opportunity! Our 48-hour hackathon brings together the brightest minds in technology to solve real-world challenges.</p>
+                <p>Last year, we hosted over 500 participants from 50+ universities, resulting in 100+ innovative projects. This year, we're going bigger and better!</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <span>Innovation-driven</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>Community-focused</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Creative Solutions</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-globe"></i>
+                        <span>Global Impact</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="stat-number">48</span>
+                    <span class="stat-label">Hours</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <span class="stat-number">$50K</span>
+                    <span class="stat-label">In Prizes</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Hackers</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Schedule Section -->
     <section id="schedule" class="schedule">
         <div class="container">
-            <h2 class="section-title">Event Schedule</h2>
-            <div class="schedule-tabs">
-                <button class="tab-btn active" data-day="1">Day 1</button>
-                <button class="tab-btn" data-day="2">Day 2</button>
-            </div>
-            <div class="timeline-container">
-                <div class="day-schedule active" id="day1">
+            <h2 class="section-title">Event Timeline</h2>
+            <div class="timeline-wrapper">
+                <div class="timeline">
                     <div class="timeline-item">
-                        <div class="time">09:00 AM</div>
+                        <div class="date">January 15, 2024</div>
                         <div class="event-content">
-                            <h3>Opening Ceremony</h3>
-                            <p>Welcome address and keynote speakers</p>
+                            <div class="event-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h3>Event Announcement</h3>
+                            <p>Official announcement of Hack to Crack 2.0</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="date">January 20, 2024</div>
+                        <div class="event-content">
+                            <div class="event-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <h3>Registration Opens</h3>
+                            <p>Start registering your team for the hackathon</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="date">February 10, 2024</div>
+                        <div class="event-content">
+                            <div class="event-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Registration Deadline</h3>
+                            <p>Last date to register your team</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item highlight">
+                        <div class="date">February 15, 2024</div>
+                        <div class="event-content">
+                            <div class="event-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>Hackathon Kickoff</h3>
+                            <p>Opening ceremony and problem statement release</p>
                             <div class="event-details">
                                 <span><i class="fas fa-map-marker-alt"></i> Main Hall</span>
-                                <span><i class="fas fa-user"></i> Dr. Tech Leader</span>
+                                <span><i class="fas fa-clock"></i> 9:00 AM</span>
                             </div>
                         </div>
                     </div>
+
                     <div class="timeline-item">
-                        <div class="time">10:00 AM</div>
+                        <div class="date">February 16, 2024</div>
                         <div class="event-content">
-                            <h3>Team Formation & Ideation</h3>
-                            <p>Form your dream team and brainstorm ideas</p>
-                            <div class="event-details">
-                                <span><i class="fas fa-map-marker-alt"></i> Innovation Hub</span>
-                                <span><i class="fas fa-users"></i> All Participants</span>
+                            <div class="event-icon">
+                                <i class="fas fa-code"></i>
                             </div>
+                            <h3>Mid-Event Check</h3>
+                            <p>Progress review and mentorship sessions</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="time">11:00 AM</div>
+
+                    <div class="timeline-item highlight">
+                        <div class="date">February 17, 2024</div>
                         <div class="event-content">
-                            <h3>Hacking Begins</h3>
-                            <p>Start your 24-hour coding journey</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">02:00 PM</div>
-                        <div class="event-content">
-                            <h3>Workshop: AI/ML</h3>
-                            <p>Advanced ML techniques for your project</p>
-                            <div class="event-details">
-                                <span><i class="fas fa-map-marker-alt"></i> Tech Lab</span>
-                                <span><i class="fas fa-user"></i> AI Expert</span>
+                            <div class="event-icon">
+                                <i class="fas fa-flag-checkered"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">06:00 PM</div>
-                        <div class="event-content">
-                            <h3>Mentor Check-in</h3>
-                            <p>One-on-one mentoring sessions</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="day-schedule" id="day2">
-                    <div class="timeline-item">
-                        <div class="time">09:00 AM</div>
-                        <div class="event-content">
-                            <h3>Progress Review</h3>
-                            <p>Check-in with mentors and progress evaluation</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">02:00 PM</div>
-                        <div class="event-content">
                             <h3>Project Submission</h3>
-                            <p>Final submission and documentation</p>
+                            <p>Final submission deadline and presentations</p>
                             <div class="event-details">
-                                <span><i class="fas fa-clock"></i> Deadline</span>
+                                <span><i class="fas fa-clock"></i> 3:00 PM</span>
                             </div>
                         </div>
                     </div>
+
                     <div class="timeline-item">
-                        <div class="time">03:00 PM</div>
+                        <div class="date">February 17, 2024</div>
                         <div class="event-content">
-                            <h3>Project Presentations</h3>
-                            <p>Present your innovation to judges</p>
-                            <div class="event-details">
-                                <span><i class="fas fa-map-marker-alt"></i> Main Stage</span>
+                            <div class="event-icon">
+                                <i class="fas fa-trophy"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">06:00 PM</div>
-                        <div class="event-content">
-                            <h3>Awards Ceremony</h3>
-                            <p>Celebration and prize distribution</p>
+                            <h3>Prize Distribution</h3>
+                            <p>Closing ceremony and winner announcements</p>
                             <div class="event-details">
-                                <span><i class="fas fa-trophy"></i> Winners Announcement</span>
+                                <span><i class="fas fa-clock"></i> 6:00 PM</span>
                             </div>
                         </div>
                     </div>
@@ -237,84 +266,212 @@
         </div>
     </section>
     
-</section>
-
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <h2 class="section-title">About The Event</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Join us for the second edition of Hack to Crack, where innovation meets opportunity! Our 48-hour hackathon brings together the brightest minds in technology to solve real-world challenges.</p>
-                <p>Last year, we hosted over 500 participants from 50+ universities, resulting in 100+ innovative projects. This year, we're going bigger and better!</p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-item">
-                    <span class="stat-number">48</span>
-                    <span class="stat-label">Hours</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">$50K</span>
-                    <span class="stat-label">In Prizes</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Hackers</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Tracks Section -->
 <section id="tracks" class="tracks">
     <div class="container">
         <h2 class="section-title">Hackathon Tracks</h2>
-        <div class="tracks-grid">
+        <div class="tracks-container">
             <div class="track-card">
-                <i class="fas fa-robot"></i>
-                <h3>AI/ML</h3>
-                <p>Build the future with artificial intelligence and machine learning</p>
+                <div class="track-content">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI/ML</h3>
+                    <p>Build the future with artificial intelligence and machine learning</p>
+                    <ul>
+                        <li>Deep Learning</li>
+                        <li>Computer Vision</li>
+                        <li>NLP</li>
+                    </ul>
+                </div>
             </div>
             <div class="track-card">
-                <i class="fas fa-globe"></i>
-                <h3>Web3</h3>
-                <p>Revolutionize the web with blockchain and decentralized applications</p>
+                <div class="track-content">
+                    <i class="fas fa-globe"></i>
+                    <h3>Web3</h3>
+                    <p>Revolutionize the web with blockchain and decentralized applications</p>
+                    <ul>
+                        <li>Blockchain</li>
+                        <li>Smart Contracts</li>
+                        <li>DeFi</li>
+                    </ul>
+                </div>
             </div>
             <div class="track-card">
-                <i class="fas fa-leaf"></i>
-                <h3>Sustainability</h3>
-                <p>Create solutions for a greener, more sustainable future</p>
+                <div class="track-content">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>Create solutions for a greener, more sustainable future</p>
+                    <ul>
+                        <li>Green Tech</li>
+                        <li>Clean Energy</li>
+                        <li>Eco Solutions</li>
+                    </ul>
+                </div>
             </div>
             <div class="track-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile</h3>
-                <p>Develop innovative mobile applications and experiences</p>
+                <div class="track-content">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile</h3>
+                    <p>Develop innovative mobile applications and experiences</p>
+                    <ul>
+                        <li>iOS/Android</li>
+                        <li>Cross-platform</li>
+                        <li>Mobile AR</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="track-card">
+                <div class="track-content">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Student Innovation</h3>
+                    <p>Showcase your innovative ideas and solutions for everyday challenges</p>
+                    <ul>
+                        <li>Campus Solutions</li>
+                        <li>Education Tech</li>
+                        <li>Student Life</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="track-card">
+                <div class="track-content">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Healthcare</h3>
+                    <p>Create solutions to improve healthcare accessibility and efficiency</p>
+                    <ul>
+                        <li>Medical Tech</li>
+                        <li>Patient Care</li>
+                        <li>Health Analytics</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="committee-preview">
-        <h2>Meet Our Team</h2>
-        <div class="committee-slider">
-            <div class="committee-slide">
-                <img src="images/team1.jpg" alt="John Doe">
-                <h3>John Doe</h3>
-                <p>Event Director</p>
+<!-- Problem Statements Section -->
+<section id="problems" class="problems">
+    <div class="container">
+        <h2 class="section-title">Problem Statements</h2>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-track">AI/ML</div>
+                <h3>Smart Campus Navigation</h3>
+                <p>Develop an AI-powered system to help students navigate large campus facilities efficiently.</p>
+                <div class="problem-details">
+                    <span><i class="fas fa-users"></i> Team Size: 2-4</span>
+                    <span><i class="fas fa-clock"></i> Duration: 48hrs</span>
+                </div>
             </div>
-            <div class="committee-slide">
-                <img src="images/team2.jpg" alt="Jane Smith">
-                <h3>Jane Smith</h3>
-                <p>Technical Lead</p>
+            
+            <div class="problem-card">
+                <div class="problem-track">Healthcare</div>
+                <h3>Remote Patient Monitoring</h3>
+                <p>Create a solution for real-time patient health monitoring and emergency response system.</p>
+                <div class="problem-details">
+                    <span><i class="fas fa-users"></i> Team Size: 2-4</span>
+                    <span><i class="fas fa-clock"></i> Duration: 48hrs</span>
+                </div>
             </div>
-            <div class="committee-slide">
-                <img src="images/team3.jpg" alt="Mike Johnson">
-                <h3>Mike Johnson</h3>
-                <p>Marketing Head</p>
+            
+            <div class="problem-card">
+                <div class="problem-track">Web3</div>
+                <h3>Decentralized Education</h3>
+                <p>Build a blockchain-based platform for verifying and sharing educational credentials.</p>
+                <div class="problem-details">
+                    <span><i class="fas fa-users"></i> Team Size: 2-4</span>
+                    <span><i class="fas fa-clock"></i> Duration: 48hrs</span>
+                </div>
+            </div>
+            
+            <div class="problem-card">
+                <div class="problem-track">Sustainability</div>
+                <h3>Green Campus Initiative</h3>
+                <p>Develop a solution to track and reduce campus energy consumption and waste.</p>
+                <div class="problem-details">
+                    <span><i class="fas fa-users"></i> Team Size: 2-4</span>
+                    <span><i class="fas fa-clock"></i> Duration: 48hrs</span>
+                </div>
+            </div>
+            
+            <div class="problem-card">
+                <div class="problem-track">Student Innovation</div>
+                <h3>Smart Study Groups</h3>
+                <p>Create a platform to help students find and form effective study groups based on their courses and schedules.</p>
+                <div class="problem-details">
+                    <span><i class="fas fa-users"></i> Team Size: 2-4</span>
+                    <span><i class="fas fa-clock"></i> Duration: 48hrs</span>
+                </div>
+            </div>
+            
+            <div class="problem-card">
+                <div class="problem-track">Mobile</div>
+                <h3>Campus Events App</h3>
+                <p>Design a mobile app to discover, track, and participate in campus events and activities.</p>
+                <div class="problem-details">
+                    <span><i class="fas fa-users"></i> Team Size: 2-4</span>
+                    <span><i class="fas fa-clock"></i> Duration: 48hrs</span>
+                </div>
             </div>
         </div>
     </div>
-    <div class="hero-overlay"></div>
+</section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="images/sachin.jpg" alt="Sachin Chaurasiya">
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sachin Chaurasiya</h3>
+                        <p class="team-role">Lead Organizer</p>
+                        <p class="team-desc">Driving innovation and community growth at H2C</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="images/team2.jpg" alt="Jane Smith">
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Jane Smith</h3>
+                        <p class="team-role">Technical Lead</p>
+                        <p class="team-desc">Ensuring smooth technical operations</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="images/team3.jpg" alt="Mike Johnson">
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Mike Johnson</h3>
+                        <p class="team-role">Marketing Head</p>
+                        <p class="team-desc">Spreading the word about H2C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="team-cta">
+                <a href="team.html" class="cta-button">Meet the Full Team <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
