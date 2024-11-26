@@ -13,27 +13,6 @@ A modern, interactive website for the Hack to Crack 2.0 hackathon event featurin
 - Responsive design for all devices
 - Previous edition archive
 
-## 🛠️ Technologies Used
-
-- HTML5
-- CSS3 (with animations)
-- JavaScript
-- Font Awesome 6.4.0
-- Google Fonts (Poppins)
-
-## 📁 Project Structure
-
-```
-H2C/
-├── certificates/      # Certificate verification system
-├── css/              # Stylesheets
-├── images/           # Image assets
-├── js/               # JavaScript files
-├── index.html        # Main landing page
-├── team.html         # Team details page
-├── previous-edition.html    # Archive of previous event
-└── verify-certificate.html  # Certificate verification page
-```
 
 ## 🚦 Getting Started
 
@@ -41,16 +20,6 @@ H2C/
 2. Open `index.html` in your web browser
 3. No additional setup or build process required
 
-## 🔗 Navigation
-
-The website includes the following main sections:
-- Home
-- About
-- Prizes
-- Certificate Verification
-- Previous Edition
-- Team
-- Contact
 
 ## This website is designed and developed by Sachin Chaurasiya.
 
