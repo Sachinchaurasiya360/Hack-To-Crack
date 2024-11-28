@@ -1,0 +1,78 @@
+/* Theme Colors */
+:root {
+    --primary-color: rgba(78,250,174,255);
+    --secondary-color: #ff4e9e;
+    --accent-color: #4e7aff;
+    --dark-bg: #0B1120;
+    --darker-bg: #060911;
+    --light-text: #ffffff;
+    --gray-text: #a0a0a0;
+    --grid-color: rgba(78,250,174,0.1);
+    --glow-color: rgba(78,250,174,0.5);
+    --transition-standard: all 0.3s ease;
+    --card-bg: rgba(11, 17, 32, 0.8);
+    --border-glow: 1px solid rgba(78,250,174,0.2);
+}
+
+/* Apply theme colors */
+.section-title {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.card {
+    border: var(--border-glow);
+    background: var(--card-bg);
+}
+
+.glow-effect {
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Hover effects */
+.btn-primary:hover,
+.card:hover {
+    box-shadow: 0 0 20px var(--glow-color);
+    transform: translateY(-2px);
+    transition: var(--transition-standard);
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    transition: var(--transition-standard);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Navigation */
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Borders and accents */
+.border-accent {
+    border-color: var(--primary-color);
+}
+
+.accent-bg {
+    background-color: var(--primary-color);
+}
