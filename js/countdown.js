@@ -1,9 +1,13 @@
 export function initializeCountdown() {
-    const countdownDate = new Date('February 15, 2024 09:00:00').getTime();
+    const countdownDate = new Date('2024-12-31T09:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
         const distance = countdownDate - now;
+
+        console.log('Current time:', now);
+        console.log('Countdown date:', countdownDate);
+        console.log('Distance:', distance);
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
