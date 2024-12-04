@@ -1,0 +1,121 @@
+
+/* Winner Showcase Section */
+.winner-showcase {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 3rem auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.winner-showcase:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.winner-showcase-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.winner-image {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.winner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.winner-image:hover img {
+    transform: scale(1.05);
+}
+
+.winner-showcase-text h3 {
+    color: var(--light-text);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.winner-showcase-text p {
+    color: var(--gray-text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 247, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+}
+
+.achievement-badge i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.achievement-badge span {
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .winner-showcase-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .winner-showcase {
+        padding: 1.5rem;
+    }
+
+    .winner-image {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .winner-showcase-text h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .winner-showcase-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .achievement-badge {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .winner-image {
+        width: 200px;
+        height: 200px;
+    }
+}

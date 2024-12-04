@@ -1,5 +1,5 @@
 export function initializeCountdown() {
-    const countdownDate = new Date('2024-12-31T09:00:00').getTime();
+    const countdownDate = new Date('2025-03-15T09:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();

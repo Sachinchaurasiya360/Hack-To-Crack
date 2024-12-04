@@ -1,19 +1,16 @@
 // Sample certificate data (in production, this would come from a server)
 const certificateData = {
-    "H2C2024001": {
+    "H2C/2024/001": {
         name: "Sachin Chaurasiya",
-        certificateNo: "H2C2024001",
-        downloadUrl: "certificates/H2C2024001.pdf"
+        certificateNo: "H2C/2024/001"
     },
-    "H2C2024002": {
+    "H2C/2024/002": {
         name: "Arbaaz Khan",
-        certificateNo: "H2C2024002",
-        downloadUrl: "certificates/H2C2024002.pdf"
+        certificateNo: "H2C/2024/002"
     },
-    "H2C2024003": {
+    "H2C/2024/003": {
         name: "Mike Johnson",
-        certificateNo: "H2C2024003",
-        downloadUrl: "certificates/H2C2024003.pdf"
+        certificateNo: "H2C/2024/003"
     }
 };
 
@@ -24,7 +21,6 @@ const resultBox = document.getElementById('resultBox');
 const errorBox = document.getElementById('errorBox');
 const holderName = document.getElementById('holderName');
 const certNo = document.getElementById('certNo');
-const downloadLink = document.getElementById('downloadLink');
 
 // Add event listener for verify button
 verifyBtn.addEventListener('click', verifyCertificate);
@@ -36,9 +32,22 @@ certificateInput.addEventListener('keypress', (e) => {
     }
 });
 
+// Function to format certificate number
+function formatCertificateNumber(input) {
+    // Remove any existing slashes and spaces
+    let clean = input.replace(/[/\s]/g, '');
+    
+    // If the input is at least 8 characters (H2C2024001)
+    if (clean.length >= 8) {
+        // Insert slashes at appropriate positions
+        return clean.slice(0, 3) + '/' + clean.slice(3, 7) + '/' + clean.slice(7);
+    }
+    return clean;
+}
+
 // Function to verify certificate
 function verifyCertificate() {
-    const certNumber = certificateInput.value.trim();
+    const certNumber = formatCertificateNumber(certificateInput.value.trim());
     
     // Hide both result and error boxes initially
     resultBox.style.display = 'none';
@@ -51,7 +60,6 @@ function verifyCertificate() {
         // Update certificate details
         holderName.textContent = data.name;
         certNo.textContent = data.certificateNo;
-        downloadLink.href = data.downloadUrl;
         
         // Show result box
         resultBox.style.display = 'block';
@@ -73,10 +81,14 @@ function verifyCertificate() {
     }
 }
 
-// Add input validation
+// Add input validation and auto-formatting
 certificateInput.addEventListener('input', (e) => {
-    e.target.value = e.target.value.toUpperCase();
-    if (e.target.value.length > 0) {
+    let value = e.target.value.toUpperCase();
+    
+    // Format the certificate number
+    if (value.length > 0) {
+        value = formatCertificateNumber(value);
+        e.target.value = value;
         verifyBtn.classList.add('active');
     } else {
         verifyBtn.classList.remove('active');
