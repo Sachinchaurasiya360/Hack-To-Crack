@@ -2,7 +2,7 @@
 const certificateData = {
     "H2C/2024/001": {
         name: "Sachin Chaurasiya",
-        certificateNo: "H2C/2024/001"
+        certificateNo: "H2C/2024/001",
     },
     "H2C/2024/002": {
         name: "Arbaaz Khan",

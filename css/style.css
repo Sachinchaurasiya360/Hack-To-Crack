@@ -11,8 +11,8 @@
     --transition-standard: all 0.3s ease;
     --card-bg: rgba(11, 17, 32, 0.8);
     --grid-color: rgba(78,250,174,0.1);
---glow-color: rgba(78,250,174,0.5);
---border-glow: 1px solid rgba(78,250,174,0.2);
+    --glow-color: rgba(78,250,174,0.5);
+    --border-glow: 1px solid rgba(78,250,174,0.2);
 }
 
 /* Global Reset and Base Styles */
@@ -952,8 +952,14 @@ body {
     transition: transform 0.3s ease;
 }
 
+.special-prize-card {
+    transition: all 0.3s ease;
+}
+
 .special-prize-card:hover {
+    border: 2px solid var(--primary-color);
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 247, 255, 0.2);
 }
 
 .special-prize-card i {
@@ -1004,10 +1010,14 @@ body {
     flex-direction: column;
 }
 
+.team-card {
+    transition: all 0.3s ease;
+}
+
 .team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 247, 255, 0.2);
 }
 
 .team-image {
@@ -1041,7 +1051,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    transition: bottom 0.3s ease;
+    transition: bottom 0.3s;
 }
 
 .team-card:hover .team-social {
@@ -1940,6 +1950,28 @@ body {
     color: var(--secondary-color);
 }
 
+/* Hover effects for Hackathon Tracks */
+.tracks .track-card {
+    transition: all 0.3s ease;
+}
+
+.tracks .track-card:hover {
+    border: 2px solid var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 247, 255, 0.2);
+}
+
+/* Hover effects for Special Category Awards */
+.special-category-card {
+    transition: all 0.3s ease;
+}
+
+.special-category-card:hover {
+    border: 2px solid var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 247, 255, 0.2);
+}
+
 /* Team Section */
 .team {
     padding: 100px 0;
@@ -1958,12 +1990,6 @@ body {
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s;
-}
-
-.team-card.featured {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
 }
 
 .team-card:hover {
@@ -2366,7 +2392,7 @@ body {
 
     .nav-menu {
         position: fixed;
-        top: 0;
+        top: 80px;
         right: -100%;
         width: 80%;
         max-width: 400px;
