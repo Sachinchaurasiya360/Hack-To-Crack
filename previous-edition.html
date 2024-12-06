@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/previous-edition.css">
-    <script src="js/navbar.js" defer></script>
+    <script type="module" src="js/previous-edition.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -19,14 +19,12 @@
                 <img src="images/logo-removebg-preview.png" alt="H2C Logo">
             </a>
             <div class="nav-menu">
-                <a href="index.html" class="nav-link">H2C 2.0</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#stats" class="nav-link">Stats</a>
-                <a href="#glimpses" class="nav-link">Glimpses</a>
-                <a href="#winners" class="nav-link">Winners</a>
-                <a href="#schedule" class="nav-link">Schedule</a>
-                <a href="#sponsors" class="nav-link">Sponsors</a>
-                <a href="#team" class="nav-link">Team</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#prizes" class="nav-link">Prizes</a>
+                <a href="index.html#sponsors" class="nav-link">Sponsors</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
             <button class="nav-toggle">
                 <i class="fas fa-bars"></i>
@@ -141,24 +139,68 @@
     <section id="glimpses" class="glimpses">
         <div class="container">
             <h2 class="section-title">Event Glimpses</h2>
-            <div class="glimpses-grid">
-                <div class="glimpse-card">
-                    <img src="./images/inaugration.jpg" alt="Opening Ceremony">
-                    <div class="glimpse-overlay">Opening Ceremony</div>
+            <div class="glimpses-container">
+                <button class="scroll-btn prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="scroll-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="glimpses-grid">
+                    <div class="glimpse-card">
+                        <img src="./images/inaugration.jpg" alt="Opening Ceremony">
+                        <div class="glimpse-overlay">Opening Ceremony</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/coding.jpg" alt="Coding Session">
+                        <div class="glimpse-overlay">Coding Session</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Mentor.jpg" alt="Mentoring Session">
+                        <div class="glimpse-overlay">Mentoring Session</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    <div class="glimpse-card">
+                        <img src="./images/Judging.jpg" alt="Project Presentation">
+                        <div class="glimpse-overlay">Project Presentation</div>
+                    </div>
+                    
                 </div>
-                <div class="glimpse-card">
-                    <img src="./images/coding.jpg" alt="Coding Session">
-                    <div class="glimpse-overlay">Coding Session</div>
-                </div>
-                <div class="glimpse-card">
-                    <img src="./images/Mentor.jpg" alt="Mentoring Session">
-                    <div class="glimpse-overlay">Mentoring Session</div>
-                </div>
-                <div class="glimpse-card">
-                    <img src="./images/Judging.jpg" alt="Project Presentation">
-                    <div class="glimpse-overlay">Project Presentation</div>
-                </div>
-                
             </div>
         </div>
     </section>
