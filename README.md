@@ -28,10 +28,6 @@ You are welcome to use this project for your hackathon or other purposes. Howeve
 
 Feel free to reach out if you have any questions or need clarification.
 
-## 🤝 Contributing
-
-Feel free to fork this repository and submit pull requests for any improvements.
-
 ## 📄 License
 
 This project is open source and available under the MIT License.

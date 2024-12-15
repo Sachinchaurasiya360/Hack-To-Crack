@@ -60,12 +60,12 @@
 
 .glimpses-grid {
     display: flex;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
+    gap: 1rem;
+    padding: 1rem 0;
     overflow-x: hidden;
     position: relative;
     width: max-content;
-    animation: scroll 30s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .glimpses-grid:hover {
@@ -77,15 +77,15 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px * 5)); /* Adjust based on number of images to show before reset */
+        transform: translateX(calc(-200px * 5));
     }
 }
 
 .glimpse-card {
-    min-width: 250px;
-    height: 300px;
+    min-width: 200px;
+    height: 240px;
     position: relative;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -125,8 +125,8 @@
     }
     
     .glimpse-card {
-        min-width: 200px;
-        height: 250px;
+        min-width: 180px;
+        height: 220px;
     }
 
     .glimpse-overlay {
@@ -139,7 +139,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-200px * 5));
+            transform: translateX(calc(-180px * 5));
         }
     }
 }
