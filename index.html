@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/new-timeline.css">
     <link rel="stylesheet" href="css/winner.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -52,28 +55,7 @@
     </nav>
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="three-d-elements">
-            <div class="cube-wrapper">
-                <div class="cube">
-                    <div class="cube-face"></div>
-                    <div class="cube-face"></div>
-                    <div class="cube-face"></div>
-                    <div class="cube-face"></div>
-                    <div class="cube-face"></div>
-                    <div class="cube-face"></div>
-                </div>
-            </div>
-            <div class="floating-rings">
-                <div class="ring"></div>
-                <div class="ring"></div>
-                <div class="ring"></div>
-            </div>
-            <div class="tech-circles">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-        </div>
+        <div id="particles-js"></div>
         <div class="hero-content">
             <h1>Hack to Crack 2.0</h1>
             <p class="tagline">Code • Create • Conquer</p>
@@ -153,6 +135,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="cta-buttons-container">
+        <a href="/problem-statements.html" class="cta-button">Problem Statement <i class="fas fa-arrow-right"></i></a>
     </div>
 </section>
     <!-- Schedule Section -->
@@ -425,7 +410,7 @@
             </div>
         </div>
     </div>
-    <div class="team-cta">
+    <div class="cta-buttons-container">
         <a href="/problem-statements.html" class="cta-button">Problem Statement <i class="fas fa-arrow-right"></i></a>
     </div>
 </section>
@@ -433,10 +418,10 @@
  <section id="downloads">
      <h2>Downloads</h2>
      <ul>
-         <li><a href="path/to/notice.pdf" download>Download Notice</a></li>
-         <li><a href="path/to/presentation.ppt" download>PPT Format </a></li>
-         <li><a href="path/to/document.pdf" download>Download PDF</a></li>
-         <li><a href="path/to/problem-statement.pdf" download>Problem Statement PDF</a></li>
+         <li><a href="Notice.pdf" download>Download Notice</a></li>
+         <li><a href="Notice.pdf" download>PPT Format </a></li>
+         <li><a href="Notice.pdf" download>Download PDF</a></li>
+         <li><a href="Notice.pdf" download>Problem Statement PDF</a></li>
      </ul>
  </section>   
 
@@ -447,9 +432,10 @@
             <div class="team-grid convenor-section">
                 <div class="team-card convenor">
                     <div class="team-image">
-                        <img src="images/hod.jpeg" alt="Convenor">
+                        <img src="images/hod.jpeg" alt="Dr. Ankush Pawar - Convenor">
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/ankush-pawar-155ba414/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/ankush-pawar-155ba414/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:ankush.pawar@vishwaniketan.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                     <div class="team-info">
@@ -462,9 +448,10 @@
             <div class="team-grid organizers-section">
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="images/sachin.jpg" alt="Lead Organizer">
+                        <img src="images/sachin.jpg" alt="Sachin Chaurasiya - Lead Organizer">
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/pratham-d-402184283/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/sachin-chaurasiya" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://sachin.engineer" target="_blank" title="Website"><i class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                     <div class="team-info">
@@ -475,22 +462,23 @@
                 </div>
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="images/dhas.jpg" alt="Lead Organizer">
+                        <img src="images/dhas.jpg" alt="Pratham Dhas - Lead Organizer">
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/pratham-d-402184283/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/pratham-d-402184283/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="team-info">
                         <h3>Pratham Dhas</h3>
                         <p class="team-role">Lead Organizer</p>
-                        <p class="team-desc">community growth at H2C</p>
+                        <p class="team-desc">Community growth at H2C</p>
                     </div>
                 </div>
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="./images/shri.jpg" alt="Lead Organizer">
+                        <img src="./images/shri.jpg" alt="Shriyash Khengre - Lead Organizer">
                         <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            
                         </div>
                     </div>
                     <div class="team-info">
@@ -501,9 +489,10 @@
                 </div>
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="images/auti.jpg" alt="Lead Organizer">
+                        <img src="images/auti.jpg" alt="Shreya Auti - Lead Organizer">
                         <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                           
                         </div>
                     </div>
                     <div class="team-info">
@@ -514,9 +503,10 @@
                 </div>
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="images/aniket.jpg" alt="Lead Organizer">
+                        <img src="images/aniket.jpg" alt="Aniket Surywanshi - Lead Organizer">
                         <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                          
                         </div>
                     </div>
                     <div class="team-info">
@@ -525,10 +515,6 @@
                         <p class="team-desc">Managing technical operations</p>
                     </div>
                 </div>
-            </div>
-        </div>
-            <div class="team-cta">
-                <a href="team.html" class="cta-button">Meet the Full Team <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -601,5 +587,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/particles-config.js"></script>
 </body>
 </html>

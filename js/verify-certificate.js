@@ -8,14 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         "H2C/2024/001": {
             name: "Sachin Chaurasiya",
             certificateNo: "H2C/2024/001",
+            role: "Lead Organizer"
         },
         "H2C/2024/002": {
             name: "Arbaaz Khan",
-            certificateNo: "H2C/2024/002"
+            certificateNo: "H2C/2024/002",
+            role: "Organizer"
         },
         "H2C/2024/003": {
-            name: "Mike Johnson",
-            certificateNo: "H2C/2024/003"
+            name: "Sonam Chaurasiya",
+            certificateNo: "H2C/2024/003",
+            role: "Organizer"
         }
     };
 
@@ -26,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorBox = document.getElementById('errorBox');
     const holderName = document.getElementById('holderName');
     const certNo = document.getElementById('certNo');
+    const holderRole = document.getElementById('holderRole');
 
     // Function to format certificate number
     function formatCertificateNumber(input) {
@@ -44,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = certificateData[certNumber];
             holderName.textContent = data.name;
             certNo.textContent = data.certificateNo;
+            holderRole.textContent = data.role;
             resultBox.style.display = 'block';
             errorBox.style.display = 'none';
         } else {

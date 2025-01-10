@@ -265,8 +265,6 @@ body {
     padding: 100px 0;
     background: var(--darker-bg);
     overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 1000px;
 }
 
 .hero::before {
@@ -280,149 +278,7 @@ body {
     animation: pulse 4s ease-in-out infinite;
 }
 
-.three-d-elements {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    perspective: 1500px;
-}
-
-.cube-wrapper {
-    position: absolute;
-    top: 50%;
-    right: 15%;
-    transform-style: preserve-3d;
-}
-
-.cube {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
-    animation: cube-float 6s ease-in-out infinite, cube-rotate 20s linear infinite;
-}
-
-@keyframes cube-float {
-    0%, 100% { transform: translateY(0) rotateX(60deg) rotateZ(45deg); }
-    50% { transform: translateY(-20px) rotateX(60deg) rotateZ(45deg); }
-}
-
-@keyframes cube-rotate {
-    0% { transform: rotateX(60deg) rotateZ(0); }
-    100% { transform: rotateX(60deg) rotateZ(360deg); }
-}
-
-.cube-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 2px solid var(--primary-color);
-    background: rgba(0, 247, 255, 0.03);
-    box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
-    backdrop-filter: blur(5px);
-}
-
-.cube .cube-face:nth-child(1) { transform: translateZ(75px); }
-.cube .cube-face:nth-child(2) { transform: rotateX(180deg) translateZ(75px); }
-.cube .cube-face:nth-child(3) { transform: rotateY(90deg) translateZ(75px); }
-.cube .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(75px); }
-.cube .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(75px); }
-.cube .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(75px); }
-
-.floating-rings {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    transform-style: preserve-3d;
-}
-
-.ring {
-    position: absolute;
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    opacity: 0.5;
-    transform-style: preserve-3d;
-}
-
-.ring:nth-child(1) {
-    width: 200px;
-    height: 200px;
-    animation: ring-rotate 15s linear infinite, ring-float 4s ease-in-out infinite;
-}
-
-.ring:nth-child(2) {
-    width: 300px;
-    height: 300px;
-    border-color: var(--secondary-color);
-    animation: ring-rotate-reverse 20s linear infinite, ring-float 6s ease-in-out infinite;
-}
-
-.ring:nth-child(3) {
-    width: 400px;
-    height: 400px;
-    border-color: var(--accent-color);
-    animation: ring-rotate 25s linear infinite, ring-float 8s ease-in-out infinite;
-}
-
-@keyframes ring-rotate {
-    0% { transform: rotateX(60deg) rotateZ(0); }
-    100% { transform: rotateX(60deg) rotateZ(360deg); }
-}
-
-@keyframes ring-rotate-reverse {
-    0% { transform: rotateX(60deg) rotateZ(360deg); }
-    100% { transform: rotateX(60deg) rotateZ(0); }
-}
-
-@keyframes ring-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-.tech-circles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-}
-
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(circle at center, rgba(0, 247, 255, 0.1) 0%, transparent 70%);
-    animation: pulse 3s ease-in-out infinite;
-}
-
-.circle:nth-child(1) {
-    top: 20%;
-    left: 20%;
-    width: 300px;
-    height: 300px;
-    animation-delay: 0s;
-}
-
-.circle:nth-child(2) {
-    top: 40%;
-    right: 10%;
-    width: 200px;
-    height: 200px;
-    animation-delay: 1s;
-}
-
-.circle:nth-child(3) {
-    bottom: 20%;
-    left: 30%;
-    width: 250px;
-    height: 250px;
-    animation-delay: 2s;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.1); }
-}
-
+/* Hero Content */
 .hero-content {
     font-family: 'Orbitron', sans-serif;
     position: relative;
@@ -991,115 +847,251 @@ body {
     transition: transform 0.3s ease;
 }
 
+.special-prize-card {
+    background: var(--card-bg);
+    border: var(--border-glow);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.special-prize-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(0, 247, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
 .special-prize-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
 }
 
-.category-icon {
+.special-prize-card:hover::before {
+    left: 100%;
+}
+
+.special-prize-card i {
     font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.special-prize-card h3 {
-    color: var(--light-text);
+.special-prize-card:hover i {
+    transform: scale(1.2);
+}
+
+.special-prize-card h4 {
+    font-size: 1.25rem;
+    color: var(--text-color);
     margin-bottom: 1rem;
-    font-size: 1.5rem;
 }
 
 .special-prize-card p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1.5rem;
+    color: var(--gray-text);
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-.prize-amount {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    font-weight: 600;
+@media (max-width: 768px) {
+    .special-prize-card {
+        padding: 1.5rem;
+    }
+    
+    .special-prize-card i {
+        font-size: 2rem;
+    }
+    
+    .special-prize-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .special-prize-card p {
+        font-size: 1rem;
+    }
 }
 
 /* Team Section */
 .team {
-    padding: 100px 0;
+    padding: 80px 0;
     background: var(--darker-bg);
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    max-width: 1100px;
-    margin: 3rem auto 0;
-    padding: 0 1rem;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
 .convenor-section {
     grid-template-columns: 1fr;
-    max-width: 250px;
-    margin: 0 auto;
+    max-width: 400px;
+    margin: 0 auto 3rem;
+}
+
+.organizers-section {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
 }
 
 .team-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 15px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 250px;
-    margin: 0 auto;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
 }
 
 .team-image {
     position: relative;
+    aspect-ratio: 1;
     overflow: hidden;
-    height: 180px;
 }
 
 .team-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-social {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.team-social a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    background: var(--secondary-color);
+    transform: translateY(0) scale(1.1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.1);
+}
+
+.team-card:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-card:hover .team-social a {
+    transform: translateY(0);
 }
 
 .team-info {
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 247, 255, 0.05)
+    );
 }
 
 .team-info h3 {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
-    color: var(--light-text);
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    font-weight: 600;
 }
 
 .team-role {
-    font-size: 0.9rem;
     color: var(--primary-color);
-    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .team-desc {
-    font-size: 0.8rem;
     color: var(--gray-text);
-    line-height: 1.4;
-}
-
-@media (max-width: 1200px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 600px;
-    }
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0;
+    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
+    .team {
+        padding: 60px 0;
+    }
+
+    .organizers-section {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .team-info {
+        padding: 1.25rem;
+    }
+
+    .team-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .team-role {
+        font-size: 0.85rem;
+    }
+
+    .team-desc {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team {
+        padding: 40px 0;
+    }
+
     .team-grid {
-        grid-template-columns: 1fr;
-        max-width: 250px;
+        gap: 1.5rem;
+    }
+
+    .team-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 }
 
@@ -1717,7 +1709,7 @@ body {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
     background: linear-gradient(
@@ -2021,35 +2013,6 @@ body {
         display: inline-block;
         margin-bottom: 1rem;
     }
-}
-
-/* Team CTA */
-.team-cta {
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.team-cta .cta-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-cta .cta-button i {
-    transition: transform 0.3s ease;
-}
-
-.team-cta .cta-button:hover i {
-    transform: translateX(5px);
-}
-
-.team-cta .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
 }
 
 /* Sponsors Section */
@@ -2846,4 +2809,86 @@ body {
     margin-top: 2rem;
     border-top: 2px solid #eee;
     padding-top: 2rem;
+}
+
+/* CTA Buttons Container */
+.cta-buttons-container {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.cta-buttons-container .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: var(--card-bg);
+    border: var(--border-glow);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(0, 247, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 247, 255, 0.2);
+    color: var(--primary-color);
+}
+
+.cta-button:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-buttons-container {
+        margin-top: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    .cta-buttons-container .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-buttons-container .cta-button {
+        width: 90%;
+        margin: 0.5rem auto;
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
 }

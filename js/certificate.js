@@ -3,14 +3,17 @@ const certificateData = {
     "H2C/2024/001": {
         name: "Sachin Chaurasiya",
         certificateNo: "H2C/2024/001",
+        Role:"Lead Organiser"
     },
     "H2C/2024/002": {
         name: "Arbaaz Khan",
-        certificateNo: "H2C/2024/002"
+        certificateNo: "H2C/2024/002",
+        Role:"Organizer"
     },
     "H2C/2024/003": {
-        name: "Mike Johnson",
-        certificateNo: "H2C/2024/003"
+        name: "Sonam Chaurasiya",
+        certificateNo: "H2C/2024/003",
+        Role:"Organizer"
     }
 };
 
