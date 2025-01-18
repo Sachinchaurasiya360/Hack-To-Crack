@@ -280,16 +280,17 @@ body {
 
 /* Hero Content */
 .hero-content {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron', sans-serif,"Black Ops One", serif;
     position: relative;
     z-index: 2;
     text-align: center;
     max-width: 800px;
 }
 
+
 .hero h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 5.5rem;
+    font-family: "Black Ops One", serif;
+    font-size: 4.5rem;
     font-weight: 900;
     margin-bottom: 1rem;
     text-align: center;
@@ -938,9 +939,10 @@ body {
 }
 
 .convenor-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 400px;
     margin: 0 auto 3rem;
+    justify-items: center;
 }
 
 .organizers-section {
@@ -2890,5 +2892,114 @@ body {
         margin: 0.5rem auto;
         padding: 0.7rem 1rem;
         font-size: 0.85rem;
+    }
+}
+
+.convenor-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+.team-card.convenor {
+    background: var(--card-bg);
+    border: var(--border-glow);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transition-standard);
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-card.convenor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(78, 250, 174, 0.2);
+}
+
+.team-card.convenor .team-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.team-card.convenor .team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card.convenor:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-card.convenor .team-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.team-card.convenor:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-card.convenor .team-social a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.team-card.convenor .team-social a:hover {
+    color: var(--primary-color);
+}
+
+.team-card.convenor .team-info {
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--card-bg), rgba(11, 17, 32, 0.95));
+}
+
+.team-card.convenor .team-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.team-card.convenor .team-info .team-role {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.team-card.convenor .team-info .team-desc {
+    color: var(--gray-text);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+    .convenor-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .team-card.convenor {
+        margin: 0 auto;
     }
 }
