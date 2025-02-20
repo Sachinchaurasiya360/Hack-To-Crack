@@ -219,6 +219,10 @@ body {
     .three-d-elements {
         display: none;
     }
+
+    .nav-toggle.active i::before {
+        content: "\f00d";
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1048,7 +1052,7 @@ body {
 }
 
 .team-desc {
-    color: var(--gray-text);
+    color: var (--gray-text);
     font-size: 0.9rem;
     margin: 0.5rem 0 0;
     line-height: 1.5;
@@ -1280,7 +1284,7 @@ body {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var (--secondary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -2203,50 +2207,68 @@ body {
 @media screen and (max-width: 968px) {
     .nav-toggle {
         display: block;
+        position: relative;
+        z-index: 1001;
+        background: transparent;
+        border: none;
+        color: var(--light-text);
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        padding: 0.5rem;
+        margin-left: auto;
     }
 
     .nav-menu {
         position: fixed;
-        top: 80px;
+        top: 0;
         right: -100%;
         width: 80%;
-        max-width: 400px;
         height: 100vh;
-        background: var(--darker-bg);
-        padding: 80px 2rem 2rem;
+        background: rgba(10, 10, 31, 0.98);
+        backdrop-filter: blur(10px);
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
         transition: 0.3s ease-in-out;
-        z-index: 999;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        padding: 2rem;
     }
 
     .nav-menu.active {
         right: 0;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-link {
+        color: var(--light-text);
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
 
     body.menu-open {
         overflow: hidden;
     }
+}
 
-    .nav-link {
+@media screen and (max-width: 480px) {
+    .nav-menu {
         width: 100%;
-        padding: 1rem;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-    }
-
-    .nav-link:hover {
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .nav-link::after {
-        display: none;
+        padding: 2rem 1rem;
     }
 }
 
+/* Additional responsive adjustments */
 @media screen and (max-width: 480px) {
     .nav-menu {
         width: 100%;

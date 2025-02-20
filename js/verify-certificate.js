@@ -19,6 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Sonam Chaurasiya",
             certificateNo: "H2C/2024/003",
             role: "Organizer"
+        },
+        "H2C/2024/004": {
+            name: "Manasvi Patil",
+            certificateNo: "H2C/2024/004",
+            role: "Organizer"
+        },
+        "H2C/2024/005": {
+            name: "Avantika Mote",
+            certificateNo: "H2C/2024/005",
+            role: "Organizer"
         }
     };
 
