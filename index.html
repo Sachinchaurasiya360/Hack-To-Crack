@@ -23,7 +23,6 @@
     <link rel="canonical" href="https://hacktorack.in">
     <link rel="icon" href="images/logo-removebg-preview.png" type="image/png">
     
-    <script src="js/countdown.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -34,10 +33,10 @@
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
-    <script src="js/countdown.js"></script>
-    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <script src="js/countdown.js" type="module" defer></script>
+    <script src="js/main.js" type="module" defer></script>
     
 </head>
 <!-- Google tag (gtag.js) -->
@@ -50,24 +49,24 @@
   gtag('config', 'G-SN5WQZT2T4');
 </script>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="#" class="nav-logo">
+            <a href="#" class="nav-logo" aria-label="H2C Logo">
                 <img src="images/logo-removebg-preview.png" alt="H2C Logo">
             </a>
-            <div class="nav-menu">
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#prizes" class="nav-link">Prizes</a>
-                <a href="/verify-certificate.html"class="nav-link">Verify Certificate</a>
+                <a href="/verify-certificate.html" class="nav-link">Verify Certificate</a>
                 <a href="/previous-edition.html" class="nav-link">Previous Edition</a>
                 <a href="/team.html" class="nav-link">Team</a>
                 <a href="/faq.html" class="nav-link">FAQ</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </nav>
     <!-- Hero Section -->
@@ -337,11 +336,7 @@
                         <h4>Best Technical Implementation</h4>
                         <p>₹ 5,000</p>
                     </div>
-                    <!-- <div class="special-prize-card">
-                        <i class="fas fa-users"></i>
-                        <h4>People's Choice</h4>
-                        <p>₹ 5,000 + Community Feature</p>
-                    </div> -->
+                    
                 </div>
             </div>
         </div>
@@ -571,7 +566,18 @@
     
     <section id="sponsors" class="sponsors">
         <div class="container">
-            <h2 class="section-title">Our Sponsors</h2>
+            <h2 class="section-title">Platform Partner</h2>
+            <div class="sponsors-grid">
+                <div class="sponsor-card">
+                    <img src="./images/1 1.png" alt="XYZ">
+                    <h3>0x.day</h3>
+                </div>
+               
+            </div>
+            
+            
+            <br>
+            <h2 class="section-title">Our Inkind Sponsors</h2>
             <div class="sponsors-grid">
                 <div class="sponsor-card">
                     <img src="./images/xyz-logo-white.png" alt="XYZ">
@@ -581,8 +587,13 @@
                     <img src="./images/interview buddy.svg" alt="interview buddy">
                     <h3>interview buddy</h3>
                 </div>
-               
             </div>
+            <br>
+            
+            
+            
+            
+            
         </div>
     </section> 
     <!-- <section id="sponsors" class="sponsors">

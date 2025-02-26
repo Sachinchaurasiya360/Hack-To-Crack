@@ -7,7 +7,10 @@ import { initializeTimeline } from './timeline.js';
 
 // Initialize all components
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize navbar first to ensure it's ready
     initializeNavbar();
+    
+    // Initialize other components
     initializeCountdown();
     init3DCards();
     initHero3D();
@@ -16,37 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimation();
     initParticles();
     initializeTimeline();
-
-    // Mobile menu functionality
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    if (navToggle && navMenu) {
-        // Toggle menu
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-
-        // Close menu when clicking links
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            const isClickInside = navMenu.contains(e.target) || navToggle.contains(e.target);
-            if (!isClickInside && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            }
-        });
-    }
 });
