@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
             role: "Organizer"
         },
         "H2C/2025/001": {
-        name: "Ritik Swaraj",
-        certificateNo: "H2C/2025/001",
-        role: "Participant"
+            name: "Ritik Swaraj",
+            certificateNo: "H2C/2025/001",
+            role: "Participant"
        },
         "H2C/2025/002": {
             name: "Abdul Raqueeb",
