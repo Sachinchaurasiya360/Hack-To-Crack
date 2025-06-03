@@ -1681,7 +1681,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: "Participant"
         },
         "H2C/2025/330": {
-            name: "Rajratna VarmaAniruddha Gharat",
+            name: "Aniruddha Aravind Gharat",
             certificateNo: "H2C/2025/330",
             role: "Participant"
         },
