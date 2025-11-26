@@ -65,7 +65,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/particles.css">
     <link rel="stylesheet" href="css/previous-edition.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="module" src="js/previous-edition.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -100,9 +102,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero previous-hero">
+    <section class="hero">
+        <div id="particles-js"></div>
         <div class="hero-content">
-            <h1 class="glitch" data-text="Hack to Crack 2.0">Hack to Crack 2.0</h1>
+            <h1>Hack to Crack 2.0</h1>
             <p class="tagline">Code Create Conquer - 2025 Edition</p>
             <div class="event-date">March 20-21, 2025</div>
         </div>
@@ -431,26 +434,42 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
+                <div class="footer-brand">
+                    <img src="images/logo-removebg-preview.png" alt="Hack to Crack Logo" class="footer-logo-img">
+                    <h3>Hack to Crack 3.0</h3>
+                    <p>Code • Create • Conquer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#prizes">Prizes</a></li>
+                        <li><a href="index.html#sponsors">Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
                     <p><i class="fas fa-envelope"></i> hacktocrack@vishwaniketan.edu.in</p>
                     <p><i class="fas fa-phone"></i> +91 7070416209</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Vishwaniketan iMEET, Mumbai</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
                         <a href="https://www.instagram.com/hack_to_crack/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/H2C_Saam"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/hack_to_crack"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/hack-to-crack"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Hack to Crack 2.0. All rights reserved.</p>
+                <p>&copy; 2025 Hack to Crack 3.0. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/particles-config.js"></script>
     <script src="js/main.js"></script>
 </body>
 
