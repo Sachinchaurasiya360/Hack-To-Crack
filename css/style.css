@@ -3202,12 +3202,36 @@ body {
         width: 100%;
     }
 
+    .dropdown .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
     .dropdown-content {
-        position: relative;
-        background-color: transparent;
+        position: static;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
         box-shadow: none;
         border: none;
         padding-left: 20px;
+        margin-top: 0.5rem;
+    }
+
+    .dropdown-content.active {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgba(0, 255, 242, 0.2);
+        padding-left: 1rem;
     }
 }
 

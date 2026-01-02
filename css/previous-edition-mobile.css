@@ -1,0 +1,39 @@
+/* Mobile-specific fixes for Previous Edition 2.0 page */
+
+/* Navbar Mobile Center Alignment */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        text-align: center;
+        align-items: center;
+    }
+
+    .nav-link {
+        text-align: center;
+        justify-content: center;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .nav-logo {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-logo img {
+        height: 40px;
+    }
+
+    .nav-menu {
+        padding: 2rem 1rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+    }
+}

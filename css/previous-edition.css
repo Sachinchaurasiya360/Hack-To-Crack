@@ -976,7 +976,97 @@
     z-index: 1;
 }
 
-.about {
-    position: relative;
-    overflow: hidden;
+/* Footer Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        text-align: center;
+    }
+
+    .footer-logo-img {
+        display: block;
+        margin: 0 auto 1rem;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-links a {
+        justify-content: center;
+    }
+
+    .footer h4 {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer-contact p {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+        text-align: center;
+    }
 }
