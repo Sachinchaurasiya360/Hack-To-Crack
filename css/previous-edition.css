@@ -46,6 +46,18 @@
     }
 }
 
+/* Special Category Awards Section */
+.special-awards-section {
+    margin-top: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .special-awards-section {
+        margin-top: 3rem;
+    }
+}
+
+
 /* Stats Section */
 .stats-grid {
     display: grid;

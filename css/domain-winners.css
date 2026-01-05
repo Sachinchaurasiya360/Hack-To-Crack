@@ -1,0 +1,289 @@
+/* Domain Winners Section */
+.domain-winners {
+    padding: 80px 0;
+    background: var(--dark-bg);
+    overflow: hidden;
+}
+
+.domain-gallery {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--darker-bg);
+    animation: autoScroll 30s linear infinite;
+}
+
+.domain-gallery:hover {
+    animation-play-state: paused;
+}
+
+@keyframes autoScroll {
+    0% {
+        scroll-behavior: auto;
+    }
+
+    100% {
+        scroll-behavior: auto;
+    }
+}
+
+.domain-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.domain-gallery::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+    border-radius: 10px;
+}
+
+.domain-gallery::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.domain-gallery::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+.domain-card {
+    min-width: 350px;
+    height: 450px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.domain-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 247, 255, 0.4);
+}
+
+.domain-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.domain-card:hover img {
+    transform: scale(1.1);
+}
+
+.domain-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.domain-card:hover .domain-overlay {
+    transform: translateY(0);
+}
+
+.domain-overlay h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 247, 255, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Lightbox Navigation Arrows */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1rem;
+    user-select: none;
+    transition: all 0.3s ease;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-prev {
+    left: 30px;
+}
+
+.lightbox-next {
+    right: 30px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--primary-color);
+    color: var(--darker-bg);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.6);
+}
+
+.lightbox-prev:active,
+.lightbox-next:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .domain-card {
+        min-width: 280px;
+        height: 380px;
+    }
+
+    .domain-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .lightbox-close {
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+    }
+
+    .lightbox-caption {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+        bottom: 20px;
+    }
+
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .domain-card {
+        min-width: 250px;
+        height: 350px;
+    }
+
+    .domain-overlay h3 {
+        font-size: 1rem;
+    }
+
+    .lightbox-caption {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+}
