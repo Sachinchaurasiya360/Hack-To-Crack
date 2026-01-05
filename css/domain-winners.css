@@ -49,8 +49,8 @@
 }
 
 .domain-card {
-    min-width: 350px;
-    height: 450px;
+    min-width: 280px;
+    height: 360px;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
@@ -231,8 +231,8 @@
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .domain-card {
-        min-width: 280px;
-        height: 380px;
+        min-width: 240px;
+        height: 320px;
     }
 
     .domain-overlay h3 {
@@ -274,8 +274,8 @@
 
 @media screen and (max-width: 480px) {
     .domain-card {
-        min-width: 250px;
-        height: 350px;
+        min-width: 220px;
+        height: 300px;
     }
 
     .domain-overlay h3 {
