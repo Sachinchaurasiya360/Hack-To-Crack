@@ -23,6 +23,33 @@
 </script>
 
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-removebg-preview.png" alt="H2C Logo">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#prizes" class="nav-link">Prizes</a>
+                <a href="/verify-certificate.html" class="nav-link">Verify Certificate</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Previous Edition <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/previous-edition.html">H2C 1.0</a>
+                        <a href="/previous-edition-2.0.html">H2C 2.0</a>
+                    </div>
+                </div>
+                <a href="/faq.html" class="nav-link">FAQ</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="team-hero">
         <div class="particle-container"></div>
@@ -340,6 +367,7 @@
     </footer>
 
     <script src="js/particles.min.js"></script>
+    <script src="js/navbar-standalone.js"></script>
     <script src="js/main.js"></script>
 
 </body>
