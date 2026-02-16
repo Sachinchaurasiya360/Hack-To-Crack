@@ -1,4 +1,4 @@
-# Hack to Crack 2.0
+# Hack to Crack
 
 A modern, interactive website for the Hack to Crack 2.0 hackathon event featuring the theme "Innovate. Code. Transform."
 
@@ -20,14 +20,8 @@ A modern, interactive website for the Hack to Crack 2.0 hackathon event featurin
 2. Open `index.html` in your web browser
 3. No additional setup or build process required
 
-
-## This website is designed and developed by Sachin Chaurasiya.
-
-# Usage Guidelines
-You are welcome to use this project for your hackathon or other purposes. However, please ensure you inform us before using it. Unauthorized use without prior notice is not permitted.
-
-Feel free to reach out if you have any questions or need clarification.
-
 ## 📄 License
 
 This project is open source and available under the MIT License.
+
+- Desgin by: Sachin Chaurasiya
