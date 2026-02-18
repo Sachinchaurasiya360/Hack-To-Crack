@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const targetDate = new Date('March 17, 2026 09:00:00').getTime();
+    const targetDate = new Date('JANUARY 17, 2026 09:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = targetDate - now;
 
         if (timeLeft <= 0) {
-            document.querySelector('.countdown').innerHTML = '<p>Event has started!</p>';
+            document.querySelector('.countdown').innerHTML = '<p></p>';
             return;
         }
 
