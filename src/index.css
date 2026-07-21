@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  /* Tabular figures for all data readouts (countdown, stats). */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+
+  ::selection {
+    background: #1b5e3f;
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1b5e3f;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  /* Section eyebrow label — mono, uppercase, tracked out. */
+  .eyebrow {
+    @apply font-mono text-[0.72rem] uppercase tracking-label text-slate;
+  }
+
+  /* Hairline that respects the design's single border token. */
+  .rule {
+    @apply border-line;
+  }
+
+  /* Editorial measure for running prose. */
+  .measure {
+    @apply max-w-prose;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
