@@ -2,9 +2,7 @@ import { initializeNavbar } from './navbar.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeNavbar();
-    
-    // Sample certificate data
-    const certificateData = {
+        const certificateData = {
         "H2C/2024/001": {
             name: "Sachin Chaurasiya",
             certificateNo: "H2C/2024/001",
